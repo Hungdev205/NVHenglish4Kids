@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Xqa-le-c6W">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--English4Kids-->
+        <scene sceneID="FSt-BU-C0E">
+            <objects>
+                <tableViewController id="Zip-Wl-63E" customClass="MasterTableVC" customModule="NVHenglish4Kids" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="78" sectionHeaderHeight="28" sectionFooterHeight="28" id="aaJ-yK-4xg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="Xm0-Sf-0ua" customClass="MyCell" customModule="NVHenglish4Kids" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xm0-Sf-0ua" id="op4-y9-vv7">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="LXf-uh-UeR" kind="show" identifier="ShowDetail" id="3fg-qL-0iY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="Zip-Wl-63E" id="Af2-CR-Yjv"/>
+                            <outlet property="delegate" destination="Zip-Wl-63E" id="UFd-8d-T8k"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="English4Kids" id="EYr-8J-Ykv"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pIb-KH-vWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-53" y="89"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="BFB-3W-OAM">
+            <objects>
+                <viewController storyboardIdentifier="MyDetailVC" id="LXf-uh-UeR" customClass="DetailVC" customModule="NVHenglish4Kids" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zkz-Tt-81c"/>
+                        <viewControllerLayoutGuide type="bottom" id="jEz-xQ-sl1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="el1-s6-mZx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Yc-EU-tft">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="r2s-BP-fRG" customClass="MyCell" customModule="NVHenglish4Kids" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="328" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r2s-BP-fRG" id="8Il-tK-aQr">
+                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Yc-EU-tft" secondAttribute="trailing" constant="-20" id="XEr-11-9yq"/>
+                            <constraint firstItem="2Yc-EU-tft" firstAttribute="leading" secondItem="el1-s6-mZx" secondAttribute="leadingMargin" constant="-20" id="hM9-SU-gNL"/>
+                            <constraint firstItem="jEz-xQ-sl1" firstAttribute="top" secondItem="2Yc-EU-tft" secondAttribute="bottom" id="idN-Lj-603"/>
+                            <constraint firstItem="2Yc-EU-tft" firstAttribute="top" secondItem="el1-s6-mZx" secondAttribute="topMargin" id="pNg-Sz-lsR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="B7p-SL-zYL"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="2Yc-EU-tft" id="QGZ-BZ-Rcu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FE5-0W-rsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="89"/>
+        </scene>
+        <!--WordVC-->
+        <scene sceneID="igI-7k-R6O">
+            <objects>
+                <viewController storyboardIdentifier="Word" id="y2B-Fc-IkX" customClass="WordVC" customModule="NVHenglish4Kids" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I1G-AY-YNX"/>
+                        <viewControllerLayoutGuide type="bottom" id="rMh-FM-wve"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="62V-hP-zm1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cnk-T3-Epw">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="480"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Apple" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VT-IK-Acb">
+                                        <rect key="frame" x="8" y="273" width="312" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g72-z9-HHb">
+                                        <rect key="frame" x="149" y="346" width="30" height="30"/>
+                                        <state key="normal" title="Play"/>
+                                        <connections>
+                                            <action selector="action_Play:" destination="y2B-Fc-IkX" eventType="touchUpInside" id="248-Wz-NNW"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bE8-qd-sVv">
+                                        <rect key="frame" x="8" y="67" width="312" height="192"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cnk-T3-Epw" firstAttribute="leading" secondItem="62V-hP-zm1" secondAttribute="leadingMargin" constant="-20" id="jfa-Bw-qG8"/>
+                            <constraint firstItem="rMh-FM-wve" firstAttribute="top" secondItem="Cnk-T3-Epw" secondAttribute="bottom" id="njt-dF-h2X"/>
+                            <constraint firstItem="Cnk-T3-Epw" firstAttribute="top" secondItem="62V-hP-zm1" secondAttribute="topMargin" id="oaD-i7-CIW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cnk-T3-Epw" secondAttribute="trailing" constant="-20" id="siK-g8-fv3"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imgWord" destination="bE8-qd-sVv" id="Zeb-n2-oLY"/>
+                        <outlet property="word" destination="9VT-IK-Acb" id="LrW-5Z-j5A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5y1-z1-IyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="89"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wc5-53-D4g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xqa-le-c6W" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bRN-Uz-dfr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zip-Wl-63E" kind="relationship" relationship="rootViewController" id="0og-kE-Ri8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVe-kc-6e5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-511" y="89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="apple.jpg" width="210" height="240"/>
+    </resources>
+</document>

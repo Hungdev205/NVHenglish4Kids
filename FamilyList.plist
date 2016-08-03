@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>family</key>
+	<string>family.jpg</string>
+	<key>brother</key>
+	<string>brother.jpg</string>
+	<key>father</key>
+	<string>father.jpg</string>
+	<key>grandmother</key>
+	<string>grandmother.jpg</string>
+	<key>mothers</key>
+	<string>mothers.jpg</string>
+	<key>sister</key>
+	<string>sister.jpg</string>
+</dict>
+</plist>

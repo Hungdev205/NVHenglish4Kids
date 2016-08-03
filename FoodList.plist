@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>food</key>
+	<string>food.jpg</string>
+	<key>beefsteak</key>
+	<string>beefsteak.jpg</string>
+	<key>breakfast</key>
+	<string>breakfast.jpg</string>
+	<key>hamburger</key>
+	<string>hamburger.jpg</string>
+	<key>pizza</key>
+	<string>pizza.jpg</string>
+	<key>spaghetti</key>
+	<string>spaghetti.jpg</string>
+</dict>
+</plist>
